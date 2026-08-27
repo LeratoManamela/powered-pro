@@ -35,7 +35,9 @@ export function ToolWorkspace({
   const [values, setValues] = useState<Record<string, string>>(() => {
     const base: Record<string, string> = {};
     for (const f of fields) {
-      base[f.name] = initialValues[f.name] ?? (f.type === "select" ? f.options[0] : "");
+      base[f.name] =
+        initialValues[f.name] ?? (f.type === "select" ? (f.options[0] ?? "") : "");
+
     }
     return base;
   });
