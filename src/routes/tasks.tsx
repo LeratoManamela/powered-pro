@@ -43,7 +43,7 @@ function TasksPage() {
           { name: "style", label: "Planning method", type: "select", options: ["Priority-first", "Weekly sprints", "Daily schedule", "Kanban backlog"] },
         ]}
         buildPrompt={(v) =>
-          `Create a work plan.\nGoal: ${v.goal}\nDeadline: ${v.deadline || "flexible"}\nCapacity: ${v.capacity}\nPlanning method: ${v.style}\nConstraints: ${v.constraints || "none stated"}`
+          `Create a work plan.\nGoal: ${v["goal"]}\nDeadline: ${v["deadline"] || "flexible"}\nCapacity: ${v["capacity"]}\nPlanning method: ${v["style"]}\nConstraints: ${v["constraints"] || "none stated"}`
         }
         submitLabel="Build plan"
         outputLabel="Task plan (editable)"

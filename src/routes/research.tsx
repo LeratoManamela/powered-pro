@@ -42,7 +42,7 @@ function ResearchPage() {
           { name: "angle", label: "Focus / constraints", type: "textarea", rows: 3, placeholder: "Focus on mid-size companies in regulated industries." },
         ]}
         buildPrompt={(v) =>
-          `Research briefing request.\nQuestion: ${v.topic}\nAudience: ${v.audience}\nDepth: ${v.depth}\nFocus: ${v.angle || "none"}`
+          `Research briefing request.\nQuestion: ${v["topic"]}\nAudience: ${v["audience"]}\nDepth: ${v["depth"]}\nFocus: ${v["angle"] || "none"}`
         }
         submitLabel="Run research"
         outputLabel="Research briefing (editable)"

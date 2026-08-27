@@ -43,7 +43,7 @@ function EmailPage() {
           { name: "cta", label: "Desired outcome", type: "text", placeholder: "Confirm the new deadline by Friday" },
         ]}
         buildPrompt={(v) =>
-          `Write a workplace email.\nRecipient: ${v.recipient || "colleague"}\nTone: ${v.tone}\nLength: ${v.length}\nDesired outcome / call to action: ${v.cta || "not specified"}\n\nKey points to cover:\n${v.purpose}`
+          `Write a workplace email.\nRecipient: ${v["recipient"] || "colleague"}\nTone: ${v["tone"]}\nLength: ${v["length"]}\nDesired outcome / call to action: ${v["cta"] || "not specified"}\n\nKey points to cover:\n${v["purpose"]}`
         }
         submitLabel="Generate email"
         outputLabel="Email draft (editable)"

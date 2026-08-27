@@ -42,7 +42,7 @@ function MeetingsPage() {
           { name: "focus", label: "Summary style", type: "select", options: ["Balanced recap", "Action-item focused", "Executive brief", "Detailed minutes"] },
         ]}
         buildPrompt={(v) =>
-          `Summarise the following meeting.\nTitle: ${v.title || "Untitled meeting"}\nAttendees: ${v.attendees || "not specified"}\nStyle: ${v.focus}\n\nNotes:\n${v.notes}`
+          `Summarise the following meeting.\nTitle: ${v["title"] || "Untitled meeting"}\nAttendees: ${v["attendees"] || "not specified"}\nStyle: ${v["focus"]}\n\nNotes:\n${v["notes"]}`
         }
         submitLabel="Summarize notes"
         outputLabel="Meeting summary (editable)"
